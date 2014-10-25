@@ -55,8 +55,13 @@ group :development, :test do
   gem 'pry-nav'
   gem 'pry-doc'
   gem 'rspec'
-  gem 'rspec-rails'
   gem 'factory_girl_rails'
+
+  gem 'spring-commands-rspec'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'rb-fsevent' if `uname` =~ /Darwin/
+
 
   gem 'database_cleaner'
   gem 'railroady' # generates Rails model (ActiveRecord, Mongoid, Datamapper) and controller UML diagrams as cross-platform .svg files

@@ -1,12 +1,17 @@
-p#notice = notice
+.row
+  .col-lg-12
+    h1.page-header
+      => link_to collections_path do
+        span.glyphicon.glyphicon-chevron-left
+      ' Collection:
+      = @collection.name
+      span.pull-right
+        = link_to edit_collection_path(@collection) do
+          span.glyphicon.glyphicon-pencil
+        | &nbsp;&nbsp;&nbsp;
+        = link_to @collection, data: {:confirm => 'Are you sure?'}, :method => :delete do
+          span.glyphicon.glyphicon-remove
+    .nav
 
-p
-  strong Name:
-  = @collection.name
-p
-  strong User:
-  = @collection.user
-
-= link_to 'Edit', edit_collection_path(@collection)
-'|
-= link_to 'Back', collections_path
+    .section
+  br

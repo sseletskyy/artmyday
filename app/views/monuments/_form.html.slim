@@ -1,0 +1,17 @@
+= simple_form_for([@collection,@monument]) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :description
+    = f.input :category_id, collection: categories_collection, selected: @monument.category_id
+
+    b Or
+    = f.input :new_category_name
+    = f.hint :new_category_name
+    = f.error :new_category_name
+
+    = f.hidden_field :collection_id
+
+  .form-actions
+    = f.button :submit

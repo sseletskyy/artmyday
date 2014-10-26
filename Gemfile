@@ -56,6 +56,7 @@ group :development, :test do
   gem 'pry-doc'
   gem 'rspec'
   gem 'factory_girl_rails'
+  gem 'faker' # generates names, emails, addresses, etc. for tests
 
   gem 'spring-commands-rspec'
   gem 'rspec-rails'

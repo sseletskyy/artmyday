@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :collections
+  resources :collections do
+    resources :monuments
+  end
 
   devise_for :users
   get 'home/index'

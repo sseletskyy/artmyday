@@ -41,7 +41,7 @@ RSpec.describe CollectionsController, type: :controller do
     it "assigns all collections as @collections" do
       collection = Collection.create! valid_attributes
       get :index, {}, valid_session
-      expect(assigns(:collections)).to eq([collection])
+      expect(assigns(:collections)).to eq(Kaminari.paginate_array(Collection.order(id: :desc)))
     end
   end
 

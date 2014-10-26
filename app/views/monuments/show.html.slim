@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Name:
+  =< @monument.name
+p
+  strong Description:
+  =< @monument.description
+p
+  strong Category:
+  =< @monument.category.try(:name)
+p
+  strong Collection:
+  =< @monument.collection.try(:name)
+
+=> link_to 'Edit', edit_collection_monument_path(@collection, @monument)
+'|
+= link_to 'Back', collection_monuments_path(@collection)

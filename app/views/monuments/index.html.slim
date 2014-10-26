@@ -1,0 +1,31 @@
+.row
+  .col-lg-12
+    h1.page-header
+      => link_to collections_path do
+        span.glyphicon.glyphicon-chevron-left
+      ' Collection:
+      = @collection.name
+      span.pull-right
+        = link_to edit_collection_path(@collection) do
+          span.glyphicon.glyphicon-pencil
+        | &nbsp;&nbsp;&nbsp;
+        = link_to @collection, data: {:confirm => 'Are you sure?'}, :method => :delete do
+          span.glyphicon.glyphicon-remove
+.row
+  .col-lg-12
+    h3.page-header
+      ' Monuments
+      = link_to new_collection_monument_path(@collection) do
+        span.glyphicon.glyphicon-plus
+      span.pull-right
+        = link_to collection_monuments_path(@collection, display_as: 'cover', page: params[:page]) do
+          span.glyphicon.glyphicon-th
+        | &nbsp;&nbsp;&nbsp;
+        = link_to collection_monuments_path(@collection, display_as: 'list', page: params[:page]) do
+          span.glyphicon.glyphicon-th-list
+
+    .nav
+      = paginate @monuments
+    .section
+      = render "monuments_#{display_as}"
+  br

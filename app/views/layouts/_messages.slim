@@ -6,7 +6,7 @@
       button.close data-dismiss="alert" type="button"
         i.glyphicon.glyphicon-remove
       i.glyphicon.glyphicon-ok
-      = content_tag :span, msg, :id => "flash_#{name}"
+      =< content_tag :span, msg, :id => "flash_#{name}"
   - else
     -if msg.is_a?(Array)
       .alert.alert-block*{:class => "alert-#{name.to_sym == :notice ? 'success' : 'danger'}"}

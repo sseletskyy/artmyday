@@ -1,0 +1,8 @@
+= simple_form_for(@collection) do |f|
+  = f.error_notification
+
+  = f.input :name
+  = f.hidden_field :user_id
+
+  .form-actions
+    = f.button :submit

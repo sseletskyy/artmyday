@@ -15,7 +15,8 @@ html(lang="en")
     = javascript_include_tag '/assets/js/datatables'
     = yield(:page_stylesheet) if content_for?(:page_stylesheet)
   body
-    /= render 'layouts/header'
+    = render 'layouts/nav'
+    p
     .container
       .main-container#main-container
         .main-container-inner

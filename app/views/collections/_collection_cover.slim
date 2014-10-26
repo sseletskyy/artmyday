@@ -1,0 +1,11 @@
+.col-lg-3.col-md-4.col-xs-6.thumb
+  span
+    = link_to collection do
+      img.img-responsive(src="http://placehold.it/400x300" alt="")
+      span
+        =collection.name
+
+  span.pull-right
+    => link_to 'Edit', edit_collection_path(collection)
+    | |
+    =< link_to 'Destroy', collection, data: {:confirm => 'Are you sure?'}, :method => :delete

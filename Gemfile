@@ -62,7 +62,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'guard-rspec'
   gem 'rb-fsevent' if `uname` =~ /Darwin/
-
+  gem 'figaro' # config/application.yml
 
   gem 'database_cleaner'
   gem 'railroady' # generates Rails model (ActiveRecord, Mongoid, Datamapper) and controller UML diagrams as cross-platform .svg files

@@ -302,7 +302,6 @@ DEPENDENCIES
   railroady
   rails (= 4.1.6)
   rails_12factor
-  rb-fsevent
   rollbar
   rspec
   rspec-rails
